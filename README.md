@@ -10,5 +10,5 @@
 According to the task there should be IE10, Windows 8; Chrome latest, Windows 8; Safari latest, Mac OS latest
 However Windows 8 is not available in SauceLabs. Cypress does not support IE browser. It is possible to use webkit to test Safari, but I need more time to set it up correctly.
 
-- Sauselabs credentials are passed as environment variables `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY`. You can set them via `~/.bash_profile` or pass any other way.
+- Sauсelabs credentials are passed as environment variables `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY`. You can set them via `~/.bash_profile` or pass any other way.
 https://docs.saucelabs.com/basics/environment-variables/
