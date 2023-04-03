@@ -1,6 +1,6 @@
 - Tests are run on the command line using `npm test`
 
-- Tests are run against http://app.baupal.de/ as the default. If there is a need to change the host, type a new baseUrl before the test command, like this:
+- Tests are run against http://app.baupal.de/ as the default. If there is a need to change the host, set the baseUrl using environmental variable. For example:
 ```CYPRESS_BASE_URL=https://staging.app.com npm test```
 
 - Tests can be configured to run various browser and OS combinations against a testing service SauceLabs. I've included
