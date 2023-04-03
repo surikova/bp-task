@@ -1,0 +1,18 @@
+{
+  "name": "baupal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "saucectl run --region eu-central-1 --build cypress-build-8WQRG"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.9.0",
+    "playwright-webkit": "^1.32.1",
+    "typescript": "^5.0.2"
+  }
+}

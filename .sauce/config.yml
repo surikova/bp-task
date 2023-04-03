@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: cypress
+defaults:
+  mode: sauce
+sauce:
+  region: eu-central-1
+  concurrency: 10 # Controls how many suites are executed at the same time.
+  metadata:
+    tags:
+      - e2e
+
+# npm:
+#   registry: https://registry.npmjs.org
+#   packages:
+#     playwright-webkit: "1.32.1"
+
+cypress:
+  version: 10.3.1 # See https://docs.saucelabs.com/dev/cli/saucectl/#supported-frameworks-and-browsers for a list of supported versions.
+  configFile: "cypress.config.ts"
+
+# Controls what files are available in the context of a test run (unless explicitly excluded by .sauceignore).
+rootDir: ./
+suites:
+  - name: "Chrome latest, Windows 8" 
+    mode: sauce
+    browser: "chrome"
+    browserVersion: "latest"
+    platformName: "Windows 10" # Windows 8 is not available.
+    config:
+      specPattern: [ "cypress/e2e/**/*.*" ] # Cypress native glob support.
+
+  - name: "IE10, Windows 8" 
+    mode: sauce
+    browser: "microsoftedge" # Cypress does not support IE 
+    browserVersion: "latest"
+    platformName: "Windows 10" # Windows 8 is not available.
+    config:
+      specPattern: [ "cypress/e2e/**/*.*" ] # Cypress native glob support.
+
+  # - name: "Safari on Mac"
+  #   mode: sauce
+  #   browser: "webkit" # Cypress does not support Safari, WebKit support is experimental 
+  #   platformName: "macOS 13"
+  #   config:
+  #     specPattern: [ "cypress/e2e/**/*.*" ]
+
+# Controls what artifacts to fetch when the suite on Sauce Cloud has finished.
+artifacts:
+  download:
+    when: always
+    match:
+      - console.log
+    directory: ./artifacts/
