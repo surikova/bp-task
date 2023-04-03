@@ -6,6 +6,7 @@
 - Tests can be configured to run various browser and OS combinations against a testing service SauceLabs. I've included
     - Edge, Windows 10
     - Chrome latest, Windows 10
+
 According to the task there should be 
     - IE10, Windows 8
     - Chrome latest, Windows 8
