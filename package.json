@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "saucectl run --region eu-central-1 --build cypress-build-8WQRG"
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "",

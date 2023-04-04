@@ -103,7 +103,7 @@ describe('Sign up flow', () => {
 
         let name = faker.name.firstName()
         let surname = faker.name.lastName()
-        let email = faker.internet.email()
+        let email = faker.internet.exampleEmail()
         let tel = faker.phone.number('##########')
 
         onSignUpPage.checkProgressBar()
